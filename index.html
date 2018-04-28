@@ -1,11 +1,64 @@
 <html>
 <head>
-<script type="text/javascript" src="config.js"></script>
-<script type="text/javascript" src="webdavlib-unminified.js"></script>
-<script type="text/javascript" src="mytest.js"></script>
+<!-- Copyright 2018 Julian Brown -->
+<!-- Sara-NL WebDav library -->
 </head>
 <body>
 <H1>Howdy</H1>
-</script>
+<p>Note: this is a trivial program, that needs to be deployed on the same
+domain that your webdav point is on or you will have browser problems, Chrome
+will simply refuse to send the webdav requests.
+</p>
+<div id=mainform>
+<table>
+<tr>
+	<td>URL (Without the http://):</td>
+	<td><input id=url type=text></td>
+</tr>
+<tr>
+	<td>Base URL (Part after url):</td>
+	<td><input id=base_url type=text></td>
+</tr>
+<tr>
+	<td>Username:</td>
+	<td><input id=username type=text></td>
+</tr>
+<tr>
+	<td>Password:</td>
+	<td><input id=password type=text></td>
+</tr>
+<tr>
+	<td>Port:</td>
+	<td><input id=port type=text></td>
+</tr>
+<tr>
+	<td>HTTPS?:</td>
+	<td><input id=https type=checkbox value="https" checked></td>
+</tr>
+<tr>
+	<td>Directory:</td>
+	<td><input id=dir type=text value="/"></td>
+</tr>
+<tr>
+	<td>Browse:</td>
+	<td><button id=browse onclick="browseit()">Browse Directory</button></td>
+</tr>
+</table>
+</div>
+<pre>
+Example: for Nextcloud
+URL mynextcloud.tld:8008
+BASE URL nextcloud/remote.php/dav/files/julian
+Username: julian
+Password: password
+Port: 8008
+HTTPS: yes
+Directory: /
+</pre>
+<div id=output_response>
+</div>
+<script type="text/javascript" src="config.js"></script>
+<script type="text/javascript" src="webdavlib.js"></script>
+<script type="text/javascript" src="mytest.js"></script>
 </body>
 </html>

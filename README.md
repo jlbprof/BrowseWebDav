@@ -23,3 +23,11 @@ Based on github project sara-nl a mature webdav client.
 I have included both the minified and unminified version for debug and ease of
 use, if there is a better way to do this please tell me how.
 
+Deploy this on the same domain as your WebDav point
+------------
+
+Chrome will refuse to honor your requests otherwise.
+On Windows you could do: 
+
+"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" --user-data-dir="G:/Temp/session" --disable-web-security
+
