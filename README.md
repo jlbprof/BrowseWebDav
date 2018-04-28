@@ -18,7 +18,7 @@ Webdavlib.js and unminified
 
 Based on github project sara-nl a mature webdav client.
 
-[a website](https://github.com/sara-nl/js-webdav-client)
+[Sara-NL](https://github.com/sara-nl/js-webdav-client)
 
 I have included both the minified and unminified version for debug and ease of
 use, if there is a better way to do this please tell me how.
